@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Selected Work - Virrat Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb3ac",
+                        "tertiary": "#005f7b",
+                        "outline-variant": "#e4beba",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-container": "#00799c",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary": "#af101a",
+                        "on-tertiary-fixed": "#001f2a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#410003",
+                        "error": "#ba1a1a",
+                        "primary-container": "#d32f2f",
+                        "on-primary-container": "#fff2f0",
+                        "on-surface-variant": "#5b403d",
+                        "surface-variant": "#e5e2e1",
+                        "surface-tint": "#ba1a20",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "secondary": "#5d5f5f",
+                        "tertiary-fixed": "#bee9ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-tertiary-container": "#e9f7ff",
+                        "outline": "#8f6f6c",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed-variant": "#930010",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Work Sans"],
+                        "headline-sm": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "mono-numeral": ["Work Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-numeral": ["14px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .img-hover-scale {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .portfolio-card:hover .img-hover-scale {
+            transform: scale(1.05);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-[120px] pb-[120px]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-background no-border flat no shadows">
+<a class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background dark:text-on-background" href="#">Virrat Global</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-caps cursor-pointer transition-opacity hover:opacity-80" href="#">Work</a>
+<a class="text-on-surface-variant font-label-caps cursor-pointer hover:text-primary transition-colors duration-300" href="#">Studio</a>
+<a class="text-on-surface-variant font-label-caps cursor-pointer hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-label-caps cursor-pointer hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="hidden md:flex text-label-caps font-label-caps text-on-surface-variant">
+            01/15
+        </div>
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<header class="mb-20 flex flex-col md:flex-row justify-between items-start md:items-end">
+<div>
+<span class="text-primary font-mono-numeral text-mono-numeral block mb-4">16/</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg uppercase tracking-tighter leading-none max-w-3xl">
+                    Selected Work
+                </h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mt-6 md:mt-0 text-right">
+                A curated montage of our most impactful culinary and hospitality visual narratives.
+            </p>
+</header>
+<!-- Bento Grid Collage -->
+<section class="bento-grid relative">
+<!-- Red accent block -->
+<div class="absolute -left-margin-desktop top-1/4 w-[120px] h-[2px] bg-primary z-0 hidden md:block"></div>
+<!-- Item 1 (Wide, spans 8 cols) -->
+<article class="portfolio-card col-span-12 md:col-span-8 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low aspect-[1.42]">
+<div class="w-full h-full overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCgHgme-x-lgcbkxXcLq-qrN0X8Ac80xauJCX5aNwmC2iskparcRB5QSyjwTpc8U7fBUol_CJgdmzosLSYt6MSDGO9vbllwkMo6Jk7YgEmlpKKCKZ3ML5Xlfxsp9W2kfwBTpEKgj6pG-jzh3ATxl7lmn2kaCU4XigOEK-dOwt8nwCrS9bl41D13UlxUAgnrrDOIdF3rMv7029E-FnCA3IPLXYN7oON5RCP0UnOFiGv4xGS01REpsPhX7ECiEvPYTNIsss"/>
+</div>
+</article>
+<!-- Item 2 (Tall, spans 4 cols) -->
+<article class="portfolio-card col-span-12 md:col-span-4 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low md:row-span-2">
+<div class="w-full h-full min-h-[400px] overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale aspect-[0.67]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqzyUvqtu0EmK9jkrerV7Q-auu_brWdURo2qXndqb6FetbGHCZb-ZoaBb48ZrHxCM4aeOagPYK7qOTf7ef2NodBWDoar4wd04HBVsGb3EoiwWxWjUjImTd4EGc4MRSjozLjQe95sy9WhyIOtDIcnAmgI2wOg2SIgekz9CTJpNUDf3EngE-oqVwvEgnZv97tW6fcOuKSbVsEv-vWHsPOmSMNajKBMtuoYaswRLVCBjoCXCcmGCLTBEA4kD2labnXBa3REs"/>
+</div>
+</article>
+<!-- Item 3 (Square-ish, spans 4 cols) -->
+<article class="portfolio-card col-span-12 md:col-span-4 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low aspect-[1.33]">
+<div class="w-full h-full overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2NDAtnVB2ElWlsAi0MDyOhXV0uX4qu5DchEAyQ-HwsbOHgEmMVdLyLvQblDIpWRS8DmZB_nQgLNtJhuFk15etK2niI-ZTI1ji0OoCpE7t1513yW0zUZrS_gN1W2ppJ9XO1tDlip_Sw2X1yAL4_CzLhVCw2jGpeItAwZ6smPMCMWq6nL77XSKU3tAlAjRyrJEXzqXqG4zeWU3lnWRHOpwXmtwvpseFLM2tmUUI2QcwHqMMd6Nep4ylB_CvREr1vMz2MEA"/>
+</div>
+</article>
+<!-- Item 4 (Square-ish, spans 4 cols) -->
+<article class="portfolio-card col-span-12 md:col-span-4 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low aspect-[1.39]">
+<div class="w-full h-full overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB50uT7r62QCT-HWkA9HPeJy3v2yClpuSD-uNODrZ4yoVBim50WexXUVfilqSV2y2ouwFtrMezcOFk_fZhslJM_oS18j5aYJGQ6BlUjH3esm7WPF4W7l_X3ktWLRpBOeynPvxkPrAlH_vwjEuhu7qOta5w-dIt7r8P0qzXOshM_5fvSQJUfE_UpJwYnBThQ4kXGY_afpRT_mzR_GxidM2TbKsILzxIUG5x-xy_j1yT0JOIVfKHeY7mHz3i11RTAvvkkCh4"/>
+</div>
+</article>
+<!-- Item 5 (Wide, spans 6 cols) -->
+<article class="portfolio-card col-span-12 md:col-span-6 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low aspect-[1.5]">
+<div class="w-full h-full overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXJHSxHYsZxGaFTMzubapglGSyUMVsLOKgeVoqQWb3EftKEcOJsf5LV1yOIosQvuqWT0cdilzJ_d1nZ4OYU--O8dtD_R0tAfqGsqv5z3iFE5Nebw-D-05c6XZXbyy9Pbf6DOrzYUBuI_uXjqqSjfFWzhGQAYxzVWSSPQZltkrSRersszjAjNAG_kWwBOmKSwAIvnw2OcB58LHQ9q8IfpG0if2HIS_wWxYcB-KheITRWnrrCnP2ANUl0Q2KbM-7Kbo-4ew"/>
+</div>
+</article>
+<!-- Item 6 (Wide, spans 6 cols) -->
+<article class="portfolio-card col-span-12 md:col-span-6 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low aspect-[1.43]">
+<div class="w-full h-full overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLfqBtbys_ImtH9ojGPkXwwoCzhVGXP81tYIMKrHau3ANJCcrjid7jsqN1wc6StHFTFLR9bsZrxfZhhJlEAMeOL7nerWl_Wcya0ElxYlorCe-WEQkNZDE_8RVzqlBlvMunzN9JZdme2zG2nYx3tvFuMQThjiLU8873mWRU1WWioC1F7Ilv22OR67qt3b8c6V6pTJbkvZXCREJDpPi8J_tjDI81yrvhVRmJ71YPXXpFdTxOH2kWIVE4_SuZbiFn9R7fFZU"/>
+</div>
+</article>
+<!-- Item 8 (Wide, spans 12 cols) -->
+<article class="portfolio-card col-span-12 relative group overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low aspect-[1.5] md:aspect-[2.25]">
+<div class="w-full h-full overflow-hidden">
+<img alt="Portfolio image" class="w-full h-full object-cover img-hover-scale object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuYaeqNTtx8ziazy8gi8RZNGh-YOhD9TGLMJEfT3tc9MBdTxKcBncQ7CnSv6HKDonyQd4-k1bOpLrpRtypjeiHfWoG2FChc5cJjy9dXi2XCVkB7wZ_vJdWO1vsdZwsRFgFl52euQBxAovFZ8hDomWha5Qhf9m9yQWhX6URQpJpakPv68UcN6AIF-fgNpTVYUw0Pj9pADL1sGLm7KSm3tz8U5AJi6DAfqRo6JvHDByB-E9plJb5XlhnLfaL4ax8BMHch6g"/>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-10 max-w-container-max mx-auto bg-background no-border flat no shadows">
+<div class="text-label-caps font-label-caps text-on-surface-variant">
+            © 2024 Virrat Global. Curating Taste.
+        </div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Index</a>
+<a class="text-primary font-label-caps hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Next Slide <span class="material-symbols-outlined align-middle ml-1 text-[16px]" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</footer>
+</body></html>

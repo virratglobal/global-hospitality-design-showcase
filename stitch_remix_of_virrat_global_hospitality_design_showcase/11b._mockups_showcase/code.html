@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Virrat Global - Brand Mockups</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#ffb3ac",
+            "tertiary": "#005f7b",
+            "outline-variant": "#e4beba",
+            "inverse-on-surface": "#f3f0ef",
+            "primary-fixed": "#ffdad6",
+            "tertiary-container": "#00799c",
+            "on-secondary-fixed": "#1a1c1c",
+            "primary": "#af101a",
+            "on-tertiary-fixed": "#001f2a",
+            "surface-container-highest": "#e5e2e1",
+            "on-primary-fixed": "#410003",
+            "error": "#ba1a1a",
+            "primary-container": "#d32f2f",
+            "on-primary-container": "#fff2f0",
+            "on-surface-variant": "#5b403d",
+            "surface-variant": "#e5e2e1",
+            "surface-tint": "#ba1a20",
+            "on-tertiary-fixed-variant": "#004d65",
+            "on-error": "#ffffff",
+            "on-background": "#1c1b1b",
+            "surface-container": "#f0eded",
+            "surface-container-low": "#f6f3f2",
+            "tertiary-fixed-dim": "#7bd1f8",
+            "surface-dim": "#dcd9d9",
+            "on-secondary-fixed-variant": "#454747",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#616363",
+            "on-primary": "#ffffff",
+            "background": "#fcf9f8",
+            "secondary-fixed-dim": "#c6c6c7",
+            "on-surface": "#1c1b1b",
+            "surface": "#fcf9f8",
+            "surface-container-high": "#eae7e7",
+            "secondary": "#5d5f5f",
+            "tertiary-fixed": "#bee9ff",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3ac",
+            "on-tertiary-container": "#e9f7ff",
+            "outline": "#8f6f6c",
+            "inverse-surface": "#313030",
+            "on-primary-fixed-variant": "#930010",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#dfe0e0",
+            "surface-bright": "#fcf9f8",
+            "secondary-fixed": "#e2e2e2",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-tablet": "40px",
+            "container-max": "1800px",
+            "margin-desktop": "80px",
+            "gutter": "32px",
+            "margin-mobile": "20px",
+            "unit": "8px",
+            "section-gap": "160px"
+          },
+          "fontFamily": {
+            "label-caps": ["Work Sans"],
+            "headline-sm": ["Epilogue"],
+            "display-lg": ["Epilogue"],
+            "display-lg-mobile": ["Epilogue"],
+            "mono-numeral": ["Work Sans"],
+            "headline-md": ["Epilogue"],
+            "body-lg": ["Work Sans"],
+            "body-md": ["Work Sans"]
+          },
+          "fontSize": {
+            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+            "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "mono-numeral": ["14px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+  
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .portfolio-card {
+      border: 1px solid theme('colors.surface-variant');
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .portfolio-card:hover {
+      border-color: theme('colors.outline');
+      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+      transform: translateY(-6px);
+    }
+    .portfolio-card img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portfolio-card:hover img {
+      transform: scale(1.05);
+    }
+    .caption-divider {
+      width: 2px;
+      height: 16px;
+      background-color: theme('colors.primary');
+      display: inline-block;
+      margin-right: theme('spacing.unit');
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[104px] pb-[104px]">
+  
+  <!-- Main Content -->
+  <main class="w-full max-w-[1800px] mx-auto px-margin-mobile md:px-margin-desktop py-16">
+    
+    <!-- Header Section -->
+    <header class="mb-section-gap flex flex-col md:flex-row gap-gutter">
+      <div class="md:w-3/12">
+        <span class="text-primary font-mono-numeral text-mono-numeral block mb-4">12/</span>
+      </div>
+      <div class="md:w-9/12">
+        <span class="text-primary font-label-caps text-label-caps block mb-4 uppercase tracking-[0.1em]">Brand Merchandise</span>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6">MOCKUPS</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-body-lg">
+          Physical touchpoints and branded collateral illustrating the visual identity of Grill's &amp; Biryani.
+        </p>
+      </div>
+    </header>
+    
+    <!-- Massive Grid of Mockup Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-section-gap items-stretch">
+      
+      <!-- Black Polo -->
+      <div class="flex">
+        <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+          <div class="h-[450px] md:h-[650px] lg:h-[750px] w-full flex justify-center items-center bg-[#f5f2f1] overflow-hidden">
+            <img alt="Grill's Branded Black Polo" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/polo_black.jpg"/>
+          </div>
+          <div class="p-8 md:p-10 bg-surface">
+            <h3 class="font-headline-sm text-headline-sm text-on-background mb-3 text-2xl md:text-3xl font-bold">Staff Uniform - Black Polo</h3>
+            <div class="flex items-center">
+              <span class="caption-divider"></span>
+              <p class="font-body-md text-body-md text-on-surface-variant text-base md:text-lg">Signature black and red polo shirt with branded chest seal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Branded Cap -->
+      <div class="flex">
+        <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+          <div class="h-[450px] md:h-[650px] lg:h-[750px] w-full flex justify-center items-center bg-[#f5f2f1] overflow-hidden">
+            <img alt="Grill's Branded Cap" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/cap.jpg"/>
+          </div>
+          <div class="p-8 md:p-10 bg-surface">
+            <h3 class="font-headline-sm text-headline-sm text-on-background mb-3 text-2xl md:text-3xl font-bold">Branded Cap</h3>
+            <div class="flex items-center">
+              <span class="caption-divider"></span>
+              <p class="font-body-md text-body-md text-on-surface-variant text-base md:text-lg">Cotton twill cap featuring embroidered identity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Leather Keychain -->
+      <div class="flex">
+        <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+          <div class="h-[450px] md:h-[650px] lg:h-[750px] w-full flex justify-center items-center bg-[#f5f2f1] overflow-hidden">
+            <img alt="Grill's Leather Keychain" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/keychain.jpg"/>
+          </div>
+          <div class="p-8 md:p-10 bg-surface">
+            <h3 class="font-headline-sm text-headline-sm text-on-background mb-3 text-2xl md:text-3xl font-bold">Identity Keychain</h3>
+            <div class="flex items-center">
+              <span class="caption-divider"></span>
+              <p class="font-body-md text-body-md text-on-surface-variant text-base md:text-lg">Red leather strap with engraved brass key ring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Red Polo -->
+      <div class="flex">
+        <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+          <div class="h-[450px] md:h-[650px] lg:h-[750px] w-full flex justify-center items-center bg-[#f5f2f1] overflow-hidden">
+            <img alt="Grill's Branded Red Polo" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/polo_red.jpg"/>
+          </div>
+          <div class="p-8 md:p-10 bg-surface">
+            <h3 class="font-headline-sm text-headline-sm text-on-background mb-3 text-2xl md:text-3xl font-bold">Staff Uniform - Red Polo</h3>
+            <div class="flex items-center">
+              <span class="caption-divider"></span>
+              <p class="font-body-md text-body-md text-on-surface-variant text-base md:text-lg">Alternate colorway with contrast black collar accents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </main>
+  
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Café &amp; Tea Culture - Virrat Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb3ac",
+                        "tertiary": "#005f7b",
+                        "outline-variant": "#e4beba",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-container": "#00799c",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary": "#af101a",
+                        "on-tertiary-fixed": "#001f2a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#410003",
+                        "error": "#ba1a1a",
+                        "primary-container": "#d32f2f",
+                        "on-primary-container": "#fff2f0",
+                        "on-surface-variant": "#5b403d",
+                        "surface-variant": "#e5e2e1",
+                        "surface-tint": "#ba1a20",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "secondary": "#5d5f5f",
+                        "tertiary-fixed": "#bee9ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-tertiary-container": "#e9f7ff",
+                        "outline": "#8f6f6c",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed-variant": "#930010",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Work Sans"],
+                        "headline-sm": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "mono-numeral": ["Work Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-numeral": ["14px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .image-hover-scale {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .image-container:hover .image-hover-scale {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-background transition-transform duration-300 transform translate-y-0" id="top-nav">
+<div class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background dark:text-on-background">
+            Virrat Global
+        </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps transition-colors duration-300" href="#">Work</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#">Studio</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="hidden md:block font-mono-numeral text-mono-numeral text-on-surface-variant">
+            01/15
+        </div>
+<!-- Mobile Menu Toggle (Decorative) -->
+<button class="md:hidden text-on-background focus:outline-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col">
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start mt-12 md:mt-24">
+<!-- Content Block (Asymmetric Left) -->
+<div class="md:col-span-5 md:col-start-1 flex flex-col pt-8 z-10 md:sticky md:top-[200px]">
+<div class="flex items-start gap-4 mb-8">
+<span class="text-primary font-mono-numeral text-mono-numeral">02/</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background mb-6 leading-tight">
+                    CAFÉ &amp; TEA<br/>CULTURE
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[400px]">
+                    Building iconic identities for India's favorite beverage brands.
+                </p>
+<!-- Secondary decorative element -->
+<div class="mt-12 w-8 h-[2px] bg-primary"></div>
+</div>
+<!-- Hero Image Block (Asymmetric Right) -->
+<div class="md:col-span-7 md:col-start-6 mt-12 md:mt-0 relative group image-container overflow-hidden border border-[#EEEEEE] hover:border-[#DDDDDD] transition-colors duration-300 bg-surface-container-low">
+<!-- Aspect ratio container for the large hero image -->
+<div class="relative w-full pb-[71.9%]">
+<img alt="Manohar Jaggery Tea Packaging" class="absolute inset-0 w-full h-full object-cover image-hover-scale origin-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM9O29zrxAVlWcupaIE3K6eMP5L7pi7pwTnZ8DF5SeLLQ4Tagvz6ut9fs7Q-NoiqTUStJJvLRLMWocdhYWAShcBjf-cZA2Sw1xx-DcTCSD-Bg7UIp-jdptXmaGY6wzoCfUNxbFw--LfeFuDAXiVeF-GQ9bL1F1wb4ruY9oAxTbCVjB82SGvqyQyLPl5urPDCwkMYAaug5vJX9_-FZhRs3NNaD3uq7j8Smgs_m-CIvzBrpVwtC_YXJVi74SAyNOhAvDXw0"/>
+</div>
+<!-- Image Caption -->
+<div class="absolute bottom-0 left-0 p-6 bg-background/90 backdrop-blur-sm border-t border-r border-[#EEEEEE] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-4">
+<div class="w-[2px] h-8 bg-primary"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">PACKAGING DESIGN</p>
+<p class="font-headline-sm text-headline-sm text-on-background">Manohar Jaggery Tea</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-10 max-w-container-max mx-auto bg-background transition-transform duration-300 transform translate-y-0" id="bottom-footer">
+<div class="text-label-caps font-label-caps text-on-surface-variant">
+            © 2024 Virrat Global. Curating Taste.
+        </div>
+<div class="flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Index</a>
+<a class="text-primary font-label-caps text-label-caps flex items-center gap-2 hover:text-primary-container transition-colors duration-200 cursor-pointer group" href="#">
+                Next Slide
+                <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform duration-200" style="font-variation-settings: 'FILL' 0; font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+</footer>
+<!-- Simple Scroll Script to hide/show headers on scroll for editorial feel -->
+<script>
+        let lastScrollTop = 0;
+        const topNav = document.getElementById('top-nav');
+        const bottomFooter = document.getElementById('bottom-footer');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Downscroll
+                topNav.style.transform = 'translateY(-100%)';
+                bottomFooter.style.transform = 'translateY(100%)';
+            } else {
+                // Upscroll
+                topNav.style.transform = 'translateY(0)';
+                bottomFooter.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body></html>

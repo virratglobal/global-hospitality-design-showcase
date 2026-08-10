@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hospitality Showcase - Ambrosia &amp; Hunger Binger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb3ac",
+                        "tertiary": "#005f7b",
+                        "outline-variant": "#e4beba",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-container": "#00799c",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary": "#af101a",
+                        "on-tertiary-fixed": "#001f2a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#410003",
+                        "error": "#ba1a1a",
+                        "primary-container": "#d32f2f",
+                        "on-primary-container": "#fff2f0",
+                        "on-surface-variant": "#5b403d",
+                        "surface-variant": "#e5e2e1",
+                        "surface-tint": "#ba1a20",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "secondary": "#5d5f5f",
+                        "tertiary-fixed": "#bee9ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-tertiary-container": "#e9f7ff",
+                        "outline": "#8f6f6c",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed-variant": "#930010",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Work Sans"],
+                        "headline-sm": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "mono-numeral": ["Work Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-numeral": ["14px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen pt-24 pb-32">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-8 max-w-container-max mx-auto no-border bg-background">
+<a class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background dark:text-on-background cursor-pointer transition-opacity hover:opacity-80" href="#">
+            Virrat Global
+        </a>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps cursor-pointer transition-opacity hover:opacity-80" href="#">Work</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80" href="#">Studio</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80" href="#">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80" href="#">Contact</a>
+</nav>
+<div class="text-on-surface-variant font-label-caps text-label-caps">
+            01/15
+        </div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16">
+<!-- Section Header -->
+<div class="mb-16 md:w-8/12">
+<span class="text-primary font-mono-numeral text-mono-numeral block mb-4">13/</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background mb-6">Hospitality Showcase</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Ambrosia &amp; Hunger Binger. Grand opening events and brand collateral, maintaining a high-end editorial feel with strategic red framing.
+            </p>
+</div>
+<!-- Collage Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Left Column: Ambrosia (Poster & Opening) -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="relative group cursor-pointer border border-surface-variant hover:border-outline transition-colors duration-300 bg-surface">
+<div class="overflow-hidden p-4">
+<img alt="Ambrosia Poster" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500 ease-in-out border-2 border-transparent group-hover:border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuETL5N8LRu7Wmi63NiAn4enwyKrN1YbjV5igJvbsiyDomyPyTgRaSa-qnw-u-xnoeXUHwhKKtiGO--c1jZSK-ICgMMYVoax7txGKK4zZHeEKQMabLHHsp6yE6JzjrJK0ebVdge5WKlfqfcOEz64RzkUkxRfGyv1KNVkxfVogl5DxCJ54oodaK4Otj5jWk2Sg6zGe9_DHeZZ8I6eEcEHtNNjZ2uiil4V2kkp6xUhfG7M6BihLoobvZgXrdiDRqDEmKy1g"/>
+</div>
+<div class="p-6 pt-2">
+<span class="font-label-caps text-label-caps text-primary block mb-2 tracking-widest uppercase">Hospitality Creative</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Ambrosia Poster</h3>
+</div>
+</div>
+<div class="relative group cursor-pointer border border-surface-variant hover:border-outline transition-colors duration-300 bg-surface">
+<div class="overflow-hidden p-4">
+<img alt="Ambrosia Opening Soon" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500 ease-in-out border-2 border-transparent group-hover:border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzkPvruRsJXBc21b4laya2aPyH_-HqmXhpTWTLLj7z-stpsTJJBRr_JemGCrtiADmPPCP9n3FUm2pPtvEeElrlH28MAz4Y3SFn3xWWtPeRtmah8il76l4GYJq6oeHpZwCBbZkL_FPht193Rp6WASiEgtdxp32k34CvwDZp2hdtgwG47No6dTIV9FxRE3gz3g0eJGoet_ZgDWrv-bjsEBXb7_YrMWsjE1n_zWFiM1GwXqp6qt_H3nakIQ5XjVcvNTvf5rw"/>
+</div>
+<div class="p-6 pt-2 flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-2 tracking-widest uppercase">Campaign</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Opening Soon</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Void / Asymmetry -->
+<div class="hidden md:block md:col-span-1"></div>
+<!-- Right Column: Collateral (Business Cards & Polo) -->
+<div class="md:col-span-6 flex flex-col gap-gutter md:mt-32">
+<div class="relative group cursor-pointer border border-surface-variant hover:border-outline transition-colors duration-300 bg-surface">
+<div class="overflow-hidden p-4">
+<img alt="Ambrosia Business Card" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500 ease-in-out border-2 border-transparent group-hover:border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ2-0uk20aa-_L91FCEW2mR0J4Yas7jkCu5Z0N9Dg31ld1WmIqbf9r1pgI-ywxLcLDWs-qj1YsUevlhqg3DlqVFmZrLq8fyStm8U_uSjKgqtYTmm_RmwF62cYGTP_wcx1YDtPqDj8ApkzlA-x7BExRKQd93yuOMgHYyzBsmHR5nvGs0yfvH93-31UsuMSi-7z1cs7LalkwaRFQ1ag-wRUdChrd-vM0OgLqKdH0m9xz7dz6z5oKezefwXd7Mg8-2vK1wfU"/>
+</div>
+<div class="p-6 pt-2">
+<span class="font-label-caps text-label-caps text-primary block mb-2 tracking-widest uppercase">Print Collateral</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Ambrosia Cards</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="relative group cursor-pointer border border-surface-variant hover:border-outline transition-colors duration-300 bg-surface">
+<div class="overflow-hidden p-4 h-64">
+<img alt="Hunger Binger Card" class="w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-500 ease-in-out border-2 border-transparent group-hover:border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv5fdiBIrFtpd0ln3CA6qTMcxykMcYXJv9xPkMURrDJvxI9S0i1SGd9gEIDAMWFg1KJG1bhh8q7mHrIx4LiWLT24DJvNi3nN9HIvQZZaovGrKap7Zpv-SpFOCa_UW4gSan1Lg0i29Azk8SZyDS88nJm8KGJfdxAs_2zqfK0LIe7IuFssBBNQrQ1y9gblaUDEEQP4FIvNjAjM7c5tln0LrGFEDQbMkzvS7HwGMdl-YZrlWEzy1FF8qDSQfddGnvaJNrhOQ"/>
+</div>
+<div class="p-4 pt-2">
+<span class="font-label-caps text-label-caps text-primary block mb-1 tracking-widest uppercase">Identity</span>
+<h4 class="font-body-lg text-body-lg text-on-background">Hunger Binger Card</h4>
+</div>
+</div>
+<div class="relative group cursor-pointer border border-surface-variant hover:border-outline transition-colors duration-300 bg-surface">
+<div class="overflow-hidden p-4 h-64">
+<img alt="Hunger Binger Polo" class="w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-500 ease-in-out border-2 border-transparent group-hover:border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4RJTaZK_V9l_taXdCaCFdEAjcWbmuD6A6MmxqXe32_BBtz2Uj3lhS3GWeQAT_qwJYE9TP1UvaaqVcP5Zp2PaLUty_8EQuSPeDwqDspR_J7Jv9mPGuBeo4ypw-BX7k531f5WrjBkame4MoKRle13agP7ELDLvsU9kKisEzjbwtgESiAxfv7UXazr8mqN1NpIyuqibLVS6UgV-VQzDce2JewdhEQthKSRkcoFKQBHD9gqbUcSyJPH2Vtx3PqKux8Nzqv4U"/>
+</div>
+<div class="p-4 pt-2">
+<span class="font-label-caps text-label-caps text-primary block mb-1 tracking-widest uppercase">Merchandise</span>
+<h4 class="font-body-lg text-body-lg text-on-background">Staff Uniform</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-50 flex justify-between items-center px-margin-desktop py-10 max-w-container-max mx-auto no-border bg-background">
+<div class="text-label-caps font-label-caps text-on-surface-variant">
+            © 2024 Virrat Global. Curating Taste.
+        </div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Index</a>
+<a class="text-primary font-label-caps text-label-caps hover:text-primary transition-colors duration-200 cursor-pointer flex items-center gap-2" href="#">
+                Next Slide
+                <span class="material-symbols-outlined" data-icon="arrow_forward" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+</footer>
+</body></html>

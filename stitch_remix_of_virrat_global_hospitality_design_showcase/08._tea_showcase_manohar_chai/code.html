@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tea Showcase - Manohar Chai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb3ac",
+                        "tertiary": "#005f7b",
+                        "outline-variant": "#e4beba",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-container": "#00799c",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary": "#af101a",
+                        "on-tertiary-fixed": "#001f2a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#410003",
+                        "error": "#ba1a1a",
+                        "primary-container": "#d32f2f",
+                        "on-primary-container": "#fff2f0",
+                        "on-surface-variant": "#5b403d",
+                        "surface-variant": "#e5e2e1",
+                        "surface-tint": "#ba1a20",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "secondary": "#5d5f5f",
+                        "tertiary-fixed": "#bee9ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-tertiary-container": "#e9f7ff",
+                        "outline": "#8f6f6c",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed-variant": "#930010",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Work Sans"],
+                        "headline-sm": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "mono-numeral": ["Work Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-numeral": ["14px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .image-hover-effect:hover img {
+            transform: scale(1.05);
+        }
+        .image-hover-effect img {
+            transition: transform 0.5s ease;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden pt-32 pb-32">
+<!-- TopNavBar -->
+<nav class="bg-background dark:bg-background fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-8 max-w-container-max mx-auto no-border transition-all duration-300">
+<div class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background dark:text-on-background">Virrat Global</div>
+<ul class="hidden md:flex gap-gutter items-center">
+<li><a class="text-primary border-b-2 border-primary pb-1 font-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80 text-label-caps" href="#">Work</a></li>
+<li><a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80 text-label-caps" href="#">Studio</a></li>
+<li><a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80 text-label-caps" href="#">Services</a></li>
+<li><a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80 text-label-caps" href="#">Contact</a></li>
+</ul>
+<div class="text-on-surface-variant font-mono-numeral text-mono-numeral hidden md:block">01/15</div>
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 md:pt-32">
+<!-- Section Header -->
+<header class="mb-16 md:mb-32 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-2 text-primary font-mono-numeral text-mono-numeral pt-2">
+                08/
+            </div>
+<div class="md:col-span-8">
+<span class="text-primary font-label-caps text-label-caps tracking-widest uppercase mb-4 block">Brand Identity</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-8">
+                    Manohar Chai: A Modern Heritage
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    A comprehensive look at the Manohar Chai brand identity. Balancing traditional tea culture with a striking, contemporary visual language designed to stand out on crowded shelves.
+                </p>
+</div>
+</header>
+<!-- Asymmetrical Collage Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Full Bleed Vertical Mockup -->
+<div class="md:col-span-7 image-hover-effect overflow-hidden border border-outline-variant rounded-sm group relative h-[600px] md:h-[900px] mb-8 md:mb-0">
+<img alt="Manohar Chai Packaging Mockup" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRtnWkR9i_stU5YCO_il2jBzxEklzYLw7EEMz0SnJX24_HFtC9vAZLx9pNAYl6fAK664LHBDxEMNAXv79_dpVbJ1TqEOtm9EcFddekUCouWTh2C0EEFE4oW1wPyMAtvTl_BrrtsVegmR7WVpfcAFzBIIiog72gAfg13oiOrQY6DNitZtUgY2Dx-vn5Q9IvL9RhOrVis9LqXLEe737RBjgGgt7fnHZvWa1l6Dwho0W638r2qULrC_MHSydmvKUt6-FNSKU"/>
+<div class="absolute bottom-0 left-0 bg-background/90 backdrop-blur-sm p-4 m-6 border border-outline-variant flex items-center gap-4">
+<div class="w-1 h-8 bg-primary"></div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Hero Packaging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Retail Display Unit</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Two Floating Mockups -->
+<div class="md:col-span-5 flex flex-col gap-16 md:gap-32 md:mt-32">
+<!-- Top Floating Mockup -->
+<div class="image-hover-effect overflow-hidden border border-outline-variant rounded-sm group relative">
+<img alt="Manohar Chai Packaging Front/Back" class="w-full aspect-[1.5] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPqHwM2mEBxTOLDm9LEXBX3_9BbQ_ED9xgc6U9iXtiqO3Xe8fLu89tFIF42ZneFjgHhDO9a9lvh-BgYWvkMSLuD1FsOFfHZoIwaP4GPlryTjoiU04ODj1Q3bOSPNF2ahlY2q5h1uQnz1TGZ14ILAdmbcTRhw_CZcRh9xBtKxxSQd3NHX2Er9Bt6Ep-LSKG_b3BBHmqt6emtuApC_Q8pUl_PdByQjeiEllaToUsGKT1nX8MjQXtvZfWdWoMEcrovuSzWX8"/>
+<div class="mt-4 px-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-4 h-[1px] bg-primary block"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Detail</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">Front &amp; Back Pouch</h4>
+</div>
+</div>
+<!-- Bottom Floating Mockup, offset slightly -->
+<div class="image-hover-effect overflow-hidden border border-outline-variant rounded-sm group relative md:-ml-16 z-10 bg-surface shadow-2xl">
+<img alt="Manohar Chai Business Card" class="w-full aspect-square object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMxff3UhQDwMc31a1tfNAVtdXeYtev_vk4Qg4aEBtTqFXQicTDyJgoX3g8ee9pgOAxdZWXw6zVdXI9BbcNuDNrHrvq5ACqO2C-_7a4xqurx3oD4WwYkmpbZwgBeudJEyAruDM_gPUbD3z-ZWZl7LzIXFEoHJbqiWBwWNDoqoxaVFlPIzzZf_gPsB36AXTzQH8SRXK0qvn9U_x1KOm9u4qOYo44tEoThFKrf5zqXzLlqmyfmmKEgjtVocTf6QWAj73zQ4Y"/>
+<div class="mt-4 px-2 pb-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-4 h-[1px] bg-primary block"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Collateral</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">Business Cards</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Brief Context/Text Block -->
+<section class="mt-32 grid grid-cols-1 md:grid-cols-12 gap-gutter pb-32">
+<div class="md:col-start-3 md:col-span-8 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="format_quote">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-background italic font-light">
+                    "The brief demanded a visual system that felt rooted in Indian tea culture, yet possessed the sharp, minimalist edge necessary for modern premium retail environments."
+                </p>
+<div class="mt-12 flex gap-4">
+<button class="bg-on-background text-on-primary font-label-caps text-label-caps px-8 py-4 hover:bg-primary transition-colors duration-300 uppercase tracking-widest">View Full Case Study</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background fixed bottom-0 w-full z-50 flex justify-between items-center px-margin-desktop py-10 max-w-container-max mx-auto no-border">
+<div class="text-label-caps font-label-caps text-on-surface-variant uppercase">© 2024 Virrat Global. Curating Taste.</div>
+<ul class="flex gap-gutter items-center">
+<li><a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-200 cursor-pointer text-label-caps uppercase" href="#">Index</a></li>
+<li><a class="text-primary font-label-caps hover:text-primary transition-colors duration-200 cursor-pointer text-label-caps uppercase flex items-center gap-2" href="#">Next Slide <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
+</ul>
+</footer>
+</body></html>

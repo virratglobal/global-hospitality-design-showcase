@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Virrat Global - Mockups 2</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#ffb3ac",
+            "tertiary": "#005f7b",
+            "outline-variant": "#e4beba",
+            "inverse-on-surface": "#f3f0ef",
+            "primary-fixed": "#ffdad6",
+            "tertiary-container": "#00799c",
+            "on-secondary-fixed": "#1a1c1c",
+            "primary": "#af101a",
+            "on-tertiary-fixed": "#001f2a",
+            "surface-container-highest": "#e5e2e1",
+            "on-primary-fixed": "#410003",
+            "error": "#ba1a1a",
+            "primary-container": "#d32f2f",
+            "on-primary-container": "#fff2f0",
+            "on-surface-variant": "#5b403d",
+            "surface-variant": "#e5e2e1",
+            "surface-tint": "#ba1a20",
+            "on-tertiary-fixed-variant": "#004d65",
+            "on-error": "#ffffff",
+            "on-background": "#1c1b1b",
+            "surface-container": "#f0eded",
+            "surface-container-low": "#f6f3f2",
+            "tertiary-fixed-dim": "#7bd1f8",
+            "surface-dim": "#dcd9d9",
+            "on-secondary-fixed-variant": "#454747",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#616363",
+            "on-primary": "#ffffff",
+            "background": "#fcf9f8",
+            "secondary-fixed-dim": "#c6c6c7",
+            "on-surface": "#1c1b1b",
+            "surface": "#fcf9f8",
+            "surface-container-high": "#eae7e7",
+            "secondary": "#5d5f5f",
+            "tertiary-fixed": "#bee9ff",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3ac",
+            "on-tertiary-container": "#e9f7ff",
+            "outline": "#8f6f6c",
+            "inverse-surface": "#313030",
+            "on-primary-fixed-variant": "#930010",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#dfe0e0",
+            "surface-bright": "#fcf9f8",
+            "secondary-fixed": "#e2e2e2",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-tablet": "40px",
+            "container-max": "1800px",
+            "margin-desktop": "80px",
+            "gutter": "32px",
+            "margin-mobile": "20px",
+            "unit": "8px",
+            "section-gap": "160px"
+          },
+          "fontFamily": {
+            "label-caps": ["Work Sans"],
+            "headline-sm": ["Epilogue"],
+            "display-lg": ["Epilogue"],
+            "display-lg-mobile": ["Epilogue"],
+            "mono-numeral": ["Work Sans"],
+            "headline-md": ["Epilogue"],
+            "body-lg": ["Work Sans"],
+            "body-md": ["Work Sans"]
+          },
+          "fontSize": {
+            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+            "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "mono-numeral": ["14px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+  
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .portfolio-card {
+      border: 1px solid theme('colors.surface-variant');
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .portfolio-card:hover {
+      border-color: theme('colors.outline');
+      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+    .portfolio-card img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portfolio-card:hover img {
+      transform: scale(1.03);
+    }
+    .caption-divider {
+      width: 2px;
+      height: 16px;
+      background-color: theme('colors.primary');
+      display: inline-block;
+      margin-right: theme('spacing.unit');
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[104px] pb-[104px]">
+  
+  <!-- Main Content -->
+  <main class="w-full max-w-[1800px] mx-auto px-margin-mobile md:px-margin-desktop py-16">
+    
+    <!-- Header Section -->
+    <header class="mb-section-gap flex flex-col md:flex-row gap-gutter">
+      <div class="md:w-3/12">
+        <span class="text-primary font-mono-numeral text-mono-numeral block mb-4">13/</span>
+      </div>
+      <div class="md:w-9/12">
+        <span class="text-primary font-label-caps text-label-caps block mb-4 uppercase tracking-[0.1em]">Outdoor Signage &amp; Collateral</span>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6">Mockups 2</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-body-lg">
+          Environmental branding collateral, signage formats, and outdoor displays created for Hotel Sai Prasadam.
+        </p>
+      </div>
+    </header>
+    
+    <!-- Asymmetrical Grid Composition -->
+    <div class="flex flex-col gap-12 mb-section-gap">
+      
+      <!-- Top Row (12 cols): Panoramic Banner (Extra Wide) -->
+      <div class="w-full">
+        <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+          <div class="h-[200px] md:h-[350px] lg:h-[420px] w-full flex justify-center items-center bg-white overflow-hidden p-6 md:p-12">
+            <img alt="Hotel Sai Prasadam - Panoramic Display Board" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/panoramic_sign.jpg"/>
+          </div>
+          <div class="p-8 bg-surface border-t border-surface-variant/30">
+            <h3 class="font-headline-sm text-headline-sm text-on-background mb-2 text-2xl font-bold">Panoramic Outdoor Fascia Sign</h3>
+            <div class="flex items-center">
+              <span class="caption-divider"></span>
+              <p class="font-body-md text-body-md text-on-surface-variant text-base">High-visibility wide format display (3.167' x 50') featuring menu graphics and central identity branding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Middle Row: 2-column Asymmetrical layout (8 cols and 4 cols) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        
+        <!-- Left: Wide Banner (8 cols) -->
+        <div class="lg:col-span-8 flex">
+          <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+            <div class="h-[300px] md:h-[450px] lg:h-[550px] w-full flex justify-center items-center bg-white overflow-hidden p-6 md:p-10">
+              <img alt="Hotel Sai Prasadam - Main Banner Signage" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/banner_20x6.jpg"/>
+            </div>
+            <div class="p-8 bg-surface border-t border-surface-variant/30">
+              <h3 class="font-headline-sm text-headline-sm text-on-background mb-2 text-2xl font-bold">Main Identity Billboard</h3>
+              <div class="flex items-center">
+                <span class="caption-divider"></span>
+                <p class="font-body-md text-body-md text-on-surface-variant text-base">Proportional sign board layout (20' x 6') showing dual language branding and pure veg indicators.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Print Collateral Composition (4 cols) -->
+        <div class="lg:col-span-4 flex">
+          <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+            <div class="h-[300px] md:h-[450px] lg:h-[550px] w-full flex justify-center items-center bg-white overflow-hidden p-6 md:p-10">
+              <img alt="Hotel Sai Prasadam - Print Collateral & Standees" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/collateral_composition.jpg"/>
+            </div>
+            <div class="p-8 bg-surface border-t border-surface-variant/30">
+              <h3 class="font-headline-sm text-headline-sm text-on-background mb-2 text-2xl font-bold">Print Collateral Suite</h3>
+              <div class="flex items-center">
+                <span class="caption-divider"></span>
+                <p class="font-body-md text-body-md text-on-surface-variant text-base">Menu standees, vertical roadside signs (VISIT AGAIN), and wall boards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Bottom Row (12 cols): Four Banners Grid -->
+      <div class="w-full">
+        <div class="portfolio-card w-full flex flex-col bg-surface-container-low rounded-lg shadow-sm">
+          <div class="h-[200px] md:h-[350px] lg:h-[420px] w-full flex justify-center items-center bg-white overflow-hidden p-6 md:p-12">
+            <img alt="Hotel Sai Prasadam - Multi-Banner Formats" class="max-w-full max-h-full w-auto h-auto object-contain" src="images/banners_grid.jpg"/>
+          </div>
+          <div class="p-8 bg-surface border-t border-surface-variant/30">
+            <h3 class="font-headline-sm text-headline-sm text-on-background mb-2 text-2xl font-bold">Series Display Boards</h3>
+            <div class="flex items-center">
+              <span class="caption-divider"></span>
+              <p class="font-body-md text-body-md text-on-surface-variant text-base font-body-md">Modular panel signage (8' x 6' each, set of 4) showcasing distinct brand visuals and menu highlights.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </main>
+  
+</body>
+</html>
