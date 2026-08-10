@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const observerOptions = {
-    root: slidesContainer,
     threshold: 0.51, // Trigger when more than 50% is visible
     rootMargin: '0px'
   };
@@ -208,18 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetId = `slide-${String(index).padStart(2, '0')}`;
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      const isMobile = window.innerWidth <= 768;
-      if (isMobile) {
-        // Scroll horizontally inside the container on mobile without page-scrolling
-        const slideWidth = slidesContainer.clientWidth;
-        slidesContainer.scrollTo({
-          left: slideWidth * (index - 1),
-          behavior: 'smooth'
-        });
-      } else {
-        // Desktop uses vertical scrollIntoView
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
+      // Always scroll vertically into view, never horizontally
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
 
     // Debounced fallback to clear scrolling flag
@@ -230,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Reset programmatic scrolling flag on native scrollend event (faster and cleaner than timeout)
-  slidesContainer.addEventListener('scrollend', () => {
+  window.addEventListener('scrollend', () => {
     isProgrammaticScrolling = false;
   }, { passive: true });
 
@@ -326,55 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- Touch Swipe Control for Mobile Devices ---
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let touchEndX = 0;
-  let touchEndY = 0;
-  let isSwipeGesture = false;
 
-  slidesContainer.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-    isSwipeGesture = false;
-  }, { passive: true });
-
-  slidesContainer.addEventListener('touchmove', (e) => {
-    touchEndX = e.touches[0].clientX;
-    touchEndY = e.touches[0].clientY;
-    
-    const deltaX = touchEndX - touchStartX;
-    const deltaY = touchEndY - touchStartY;
-    
-    // Detect intent: if horizontal movement is larger than vertical movement, it's a horizontal swipe
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
-      isSwipeGesture = true;
-      // Prevent default page scrolling if they are swipe navigating horizontally
-      if (e.cancelable) {
-        e.preventDefault();
-      }
-    }
-  }, { passive: false });
-
-  slidesContainer.addEventListener('touchend', (e) => {
-    // Skip swipe handling if the drawer is open
-    if (contactDrawer.classList.contains('open')) return;
-
-    if (isSwipeGesture) {
-      const deltaX = touchEndX - touchStartX;
-      const swipeThreshold = 50; // px (40-60px threshold)
-
-      if (Math.abs(deltaX) > swipeThreshold) {
-        if (deltaX < 0) {
-          // Swiped left -> Next slide
-          goToSlide(currentActiveIndex + 1);
-        } else {
-          // Swiped right -> Previous slide
-          goToSlide(currentActiveIndex - 1);
-        }
-      }
-    }
-  }, { passive: true });
 
   // --- Mobile Navigation Menu ---
   const toggleMobileMenu = () => {
