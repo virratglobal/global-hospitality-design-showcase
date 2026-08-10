@@ -25,6 +25,30 @@ body {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+  .slides-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: none;
+    height: 100vh;
+    width: 100vw;
+  }
+  .slide-section {
+    scroll-snap-align: none;
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .brand-logo {
   transition: filter 0.3s ease;
 }
