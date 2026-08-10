@@ -163,6 +163,29 @@ body {
     height: auto !important;
     min-height: auto !important;
     overflow-y: visible !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  /* Remove full screen height restrictions on mobile contents */
+  .min-h-screen, .h-screen, [class*="min-h-screen"], [class*="h-screen"] {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  /* Optimize paddings and margins to reduce massive blank spaces */
+  .py-32, .py-24, .py-16, .pt-32, .pb-32, .pt-24, .pb-24, .pt-\[120px\], .pb-\[120px\] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .mt-32, .mb-32, .mt-24, .mb-24, .my-24, .my-32, .mb-8, .mt-12, .mb-12 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .gap-24, .gap-32, .gap-16, .gap-12 {
+    gap: 1rem !important;
+  }
+  /* Reduce heights of custom spacer elements */
+  .h-24, .h-16, .h-12 {
+    height: 1.5rem !important;
   }
 }
 
@@ -201,14 +224,19 @@ body {
 }
 
 .dot-btn {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(175, 16, 26, 0.3); /* Alpha primary */
+  background-color: rgba(28, 27, 27, 0.25);
+  opacity: 0.35;
   border: 1px solid transparent;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   position: relative;
+}
+
+.dark .dot-btn {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .dot-btn::after {
@@ -229,6 +257,11 @@ body {
   transition: all 0.3s ease;
 }
 
+.dot-btn:hover {
+  opacity: 0.7;
+  transform: scale(1.15);
+}
+
 .dot-btn:hover::after {
   opacity: 0.9;
   transform: translateY(-50%) translateX(0);
@@ -236,8 +269,14 @@ body {
 
 .dot-btn.active {
   background-color: #af101a; /* primary */
-  transform: scale(1.4);
-  box-shadow: 0 0 8px rgba(175, 16, 26, 0.5);
+  opacity: 1;
+  transform: scale(1.3);
+  box-shadow: 0 0 6px rgba(175, 16, 26, 0.35);
+}
+
+.dark .dot-btn.active {
+  background-color: #ffb4a9; /* light primary */
+  box-shadow: 0 0 8px rgba(255, 180, 169, 0.4);
 }
 
 /* Glassmorphism Header */
