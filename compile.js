@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseDir = '/Users/apple/.gemini/antigravity-ide/scratch/global-hospitality-design-showcase/stitch_remix_of_virrat_global_hospitality_design_showcase';
-const outputDir = '/Users/apple/.gemini/antigravity-ide/scratch/global-hospitality-design-showcase';
+const baseDir = path.join(__dirname, 'stitch_remix_of_virrat_global_hospitality_design_showcase');
+const outputDir = __dirname;
 
 const directories = fs.readdirSync(baseDir)
   .filter(name => fs.statSync(path.join(baseDir, name)).isDirectory())
