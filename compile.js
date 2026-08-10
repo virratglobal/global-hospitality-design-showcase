@@ -143,6 +143,13 @@ body {
   box-sizing: border-box;
 }
 
+.brand-logo {
+  transition: filter 0.3s ease;
+}
+.dark .brand-logo {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -417,43 +424,19 @@ const htmlSkeleton = `<!DOCTYPE html>
   <!-- Top Navigation Header -->
   <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-header" id="global-header">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 flex justify-between items-center">
-      <a class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background cursor-pointer hover:opacity-80" href="#slide-01">
-        Virrat Global
+      <a class="cursor-pointer hover:opacity-80 flex items-center gap-3" href="#slide-01">
+        <img src="stitch_remix_of_virrat_global_hospitality_design_showcase/logo_transparent.png" alt="Virrat Global Logo" class="h-16 w-auto object-contain brand-logo"/>
+        <span class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background">Virrat Global</span>
       </a>
       
-      <nav class="hidden md:flex space-x-8">
-        <a class="nav-menu-link text-on-surface-variant font-label-caps text-label-caps hover:text-primary relative red-thread-nav transition-colors duration-300" href="#work" data-section="work">Work</a>
-        <a class="nav-menu-link text-on-surface-variant font-label-caps text-label-caps hover:text-primary relative red-thread-nav transition-colors duration-300" href="#studio" data-section="studio">Studio</a>
-        <a class="nav-menu-link text-on-surface-variant font-label-caps text-label-caps hover:text-primary relative red-thread-nav transition-colors duration-300" href="#services" data-section="services">Services</a>
-        <a class="nav-menu-link text-on-surface-variant font-label-caps text-label-caps hover:text-primary relative red-thread-nav transition-colors duration-300" href="#contact" data-section="contact">Contact</a>
-      </nav>
-      
       <div class="flex items-center gap-6">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full hover:bg-surface-container" aria-label="Toggle Dark Mode">
-          <span class="material-symbols-outlined">dark_mode</span>
-        </button>
-        
         <!-- Slide Count -->
         <div class="text-label-caps font-label-caps text-on-surface-variant tracking-wider" id="slide-counter">
           01 / ${directories.length}
         </div>
-        
-        <!-- Mobile Menu Trigger -->
-        <button id="mobile-menu-toggle" class="md:hidden text-on-background p-1 flex items-center justify-center" aria-label="Open Menu">
-          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
-        </button>
       </div>
     </div>
   </header>
-
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="fixed inset-x-0 top-[76px] z-40 bg-background/95 backdrop-blur-lg border-b border-surface-variant/30 py-6 px-margin-mobile flex flex-col gap-4 shadow-xl transform -translate-y-full opacity-0 pointer-events-none transition-all duration-300 md:hidden">
-    <a class="nav-menu-link text-body-lg font-bold py-2 border-b border-surface-variant/20" href="#work" data-section="work">Work</a>
-    <a class="nav-menu-link text-body-lg font-bold py-2 border-b border-surface-variant/20" href="#studio" data-section="studio">Studio</a>
-    <a class="nav-menu-link text-body-lg font-bold py-2 border-b border-surface-variant/20" href="#services" data-section="services">Services</a>
-    <a class="nav-menu-link text-body-lg font-bold py-2" href="#contact" data-section="contact">Contact</a>
-  </div>
 
   <!-- Slides Scroll Container -->
   <div class="slides-container" id="slides-container">
@@ -527,11 +510,11 @@ const htmlSkeleton = `<!DOCTYPE html>
       <div class="border-t border-surface-variant/30 pt-8 mt-4 flex flex-col gap-4">
         <div class="flex items-center gap-3">
           <span class="text-primary material-symbols-outlined">mail</span>
-          <a href="mailto:hello@virratglobal.com" class="text-on-background hover:underline font-semibold font-mono-numeral text-sm">hello@virratglobal.com</a>
+          <a href="mailto:virratglobal@gmail.com" class="text-on-background hover:underline font-semibold font-mono-numeral text-sm">virratglobal@gmail.com</a>
         </div>
         <div class="flex items-center gap-3">
           <span class="text-primary material-symbols-outlined">call</span>
-          <span class="text-secondary font-mono-numeral text-sm">+1 (555) 019-2834</span>
+          <span class="text-secondary font-mono-numeral text-sm">+91 20 4515 7739</span>
         </div>
         <div class="flex items-center gap-3">
           <span class="text-primary material-symbols-outlined">location_on</span>

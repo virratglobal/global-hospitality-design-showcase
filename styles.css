@@ -25,6 +25,13 @@ body {
   box-sizing: border-box;
 }
 
+.brand-logo {
+  transition: filter 0.3s ease;
+}
+.dark .brand-logo {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;

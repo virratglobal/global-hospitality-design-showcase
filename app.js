@@ -50,18 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
       document.documentElement.classList.add('dark');
-      themeToggleBtn.querySelector('.material-symbols-outlined').textContent = 'light_mode';
+      if (themeToggleBtn) {
+        const icon = themeToggleBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = 'light_mode';
+      }
     } else {
       document.documentElement.classList.remove('dark');
-      themeToggleBtn.querySelector('.material-symbols-outlined').textContent = 'dark_mode';
+      if (themeToggleBtn) {
+        const icon = themeToggleBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = 'dark_mode';
+      }
     }
   };
 
-  themeToggleBtn.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    themeToggleBtn.querySelector('.material-symbols-outlined').textContent = isDark ? 'light_mode' : 'dark_mode';
-  });
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const icon = themeToggleBtn.querySelector('.material-symbols-outlined');
+      if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+    });
+  }
 
   // --- Scroll & Active Slide Observer ---
   const updateActiveElements = (slideIndex) => {
@@ -81,21 +90,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Update Top Navigation active state
-    const targetSection = slideSectionMapping[slideIndex];
-    navLinks.forEach(link => {
-      const linkSection = link.getAttribute('data-section');
-      if (linkSection === targetSection) {
-        link.classList.remove('text-on-surface-variant');
-        link.classList.add('text-primary');
-        // Add border/active indicators if they exist
-        if (!link.classList.contains('border-b-2')) {
-          link.classList.add('border-b-2', 'border-primary', 'pb-1');
+    if (navLinks && navLinks.length > 0) {
+      const targetSection = slideSectionMapping[slideIndex];
+      navLinks.forEach(link => {
+        const linkSection = link.getAttribute('data-section');
+        if (linkSection === targetSection) {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary');
+          // Add border/active indicators if they exist
+          if (!link.classList.contains('border-b-2')) {
+            link.classList.add('border-b-2', 'border-primary', 'pb-1');
+          }
+        } else {
+          link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+          link.classList.add('text-on-surface-variant');
         }
-      } else {
-        link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
-        link.classList.add('text-on-surface-variant');
-      }
-    });
+      });
+    }
 
     // Toggle header opacity/blur on Cover vs Other pages
     if (slideIndex === 1) {
@@ -313,6 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Mobile Navigation Menu ---
   const toggleMobileMenu = () => {
+    if (!mobileMenu) return;
     const isOpen = mobileMenu.classList.contains('opacity-100');
     if (isOpen) {
       closeMobileMenu();
@@ -322,18 +334,28 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const openMobileMenu = () => {
+    if (!mobileMenu) return;
     mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
     mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
-    mobileMenuToggleBtn.querySelector('.material-symbols-outlined').textContent = 'close';
+    if (mobileMenuToggleBtn) {
+      const icon = mobileMenuToggleBtn.querySelector('.material-symbols-outlined');
+      if (icon) icon.textContent = 'close';
+    }
   };
 
   const closeMobileMenu = () => {
+    if (!mobileMenu) return;
     mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
     mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-    mobileMenuToggleBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
+    if (mobileMenuToggleBtn) {
+      const icon = mobileMenuToggleBtn.querySelector('.material-symbols-outlined');
+      if (icon) icon.textContent = 'menu';
+    }
   };
 
-  mobileMenuToggleBtn.addEventListener('click', toggleMobileMenu);
+  if (mobileMenuToggleBtn) {
+    mobileMenuToggleBtn.addEventListener('click', toggleMobileMenu);
+  }
 
   // Initialize Page State
   initializeTheme();
