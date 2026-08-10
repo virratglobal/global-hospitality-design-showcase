@@ -1,0 +1,14 @@
+{
+  "name": "global-hospitality-design-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stitched and unified Global Hospitality Design Showcase portfolio application",
+  "scripts": {
+    "build": "node compile.js",
+    "start": "npx http-server -p 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
