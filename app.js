@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
 
   let currentActiveIndex = 1;
+  let isProgrammaticScrolling = false;
+  let scrollTimeout = null;
 
   // Active link mapping based on sections
   // Work: Cover (1), Intro (3), Fine Dining (6), Manohar Chai (8), Chai Packaging (9), Street Food (11), Events (13), Promos (15), Selected Work (16)
@@ -126,7 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const slideIndex = parseInt(entry.target.getAttribute('data-slide-index'), 10);
-        updateActiveElements(slideIndex);
+        if (!isProgrammaticScrolling) {
+          currentActiveIndex = slideIndex;
+          updateActiveElements(slideIndex);
+        }
       }
     });
   }, observerOptions);
@@ -185,18 +190,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // --- Click Navigation Handler (Dot Navigation & Nav Links) ---
-  const scrollToSlide = (slideId) => {
-    const targetElement = document.getElementById(slideId);
+  // --- Centralized Slide Navigation State Handler ---
+  const goToSlide = (targetIndex) => {
+    let index = parseInt(targetIndex, 10);
+    
+    // Wrap around boundaries
+    if (index < 1) {
+      index = slides.length;
+    } else if (index > slides.length) {
+      index = 1;
+    }
+
+    isProgrammaticScrolling = true;
+    currentActiveIndex = index;
+    updateActiveElements(index);
+
+    const targetId = `slide-${String(index).padStart(2, '0')}`;
+    const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
+
+    // Debounced fallback to clear scrolling flag
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isProgrammaticScrolling = false;
+    }, 850);
   };
 
+  // Reset programmatic scrolling flag on native scrollend event (faster and cleaner than timeout)
+  slidesContainer.addEventListener('scrollend', () => {
+    isProgrammaticScrolling = false;
+  }, { passive: true });
+
+  // --- Click Navigation Handler (Dot Navigation & Nav Links) ---
   dotBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetId = btn.getAttribute('data-target');
-      scrollToSlide(targetId);
+      const index = parseInt(targetId.replace('slide-', ''), 10);
+      goToSlide(index);
     });
   });
 
@@ -216,8 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (targetSlideIndex) {
           e.preventDefault();
-          const targetId = `slide-${String(targetSlideIndex).padStart(2, '0')}`;
-          scrollToSlide(targetId);
+          goToSlide(targetSlideIndex);
           closeMobileMenu();
         }
       }
@@ -260,16 +291,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let targetIndex = -1;
     if (e.key === 'ArrowDown' || e.key === 'PageDown') {
       e.preventDefault();
-      targetIndex = Math.min(currentActiveIndex + 1, slides.length);
+      targetIndex = currentActiveIndex + 1;
     } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
       e.preventDefault();
-      targetIndex = Math.max(currentActiveIndex - 1, 1);
+      targetIndex = currentActiveIndex - 1;
     } else if (e.key === 'Spacebar' || e.key === ' ') {
       e.preventDefault();
       if (e.shiftKey) {
-        targetIndex = Math.max(currentActiveIndex - 1, 1);
+        targetIndex = currentActiveIndex - 1;
       } else {
-        targetIndex = Math.min(currentActiveIndex + 1, slides.length);
+        targetIndex = currentActiveIndex + 1;
       }
     } else if (e.key === 'Home') {
       e.preventDefault();
@@ -280,8 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (targetIndex !== -1 && targetIndex !== currentActiveIndex) {
-      const targetId = `slide-${String(targetIndex).padStart(2, '0')}`;
-      scrollToSlide(targetId);
+      goToSlide(targetIndex);
     }
   });
 
@@ -309,15 +339,14 @@ document.addEventListener('DOMContentLoaded', () => {
       let targetIndex = currentActiveIndex;
       if (deltaY < 0) {
         // Swiped up -> Next slide
-        targetIndex = Math.min(currentActiveIndex + 1, slides.length);
+        targetIndex = currentActiveIndex + 1;
       } else {
         // Swiped down -> Previous slide
-        targetIndex = Math.max(currentActiveIndex - 1, 1);
+        targetIndex = currentActiveIndex - 1;
       }
 
       if (targetIndex !== currentActiveIndex) {
-        const targetId = `slide-${String(targetIndex).padStart(2, '0')}`;
-        scrollToSlide(targetId);
+        goToSlide(targetIndex);
       }
     }
   };

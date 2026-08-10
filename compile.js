@@ -424,9 +424,8 @@ const htmlSkeleton = `<!DOCTYPE html>
   <!-- Top Navigation Header -->
   <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-header" id="global-header">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 flex justify-between items-center">
-      <a class="cursor-pointer hover:opacity-80 flex items-center gap-3" href="#slide-01">
-        <img src="stitch_remix_of_virrat_global_hospitality_design_showcase/logo_transparent.png" alt="Virrat Global Logo" class="h-16 w-auto object-contain brand-logo"/>
-        <span class="text-body-lg font-headline-md font-bold tracking-tighter text-on-background">Virrat Global</span>
+      <a class="cursor-pointer hover:opacity-80 flex items-center" href="#slide-01">
+        <img src="stitch_remix_of_virrat_global_hospitality_design_showcase/logo_transparent.png" alt="Virrat Global Logo" class="h-20 w-auto object-contain brand-logo"/>
       </a>
       
       <div class="flex items-center gap-6">
